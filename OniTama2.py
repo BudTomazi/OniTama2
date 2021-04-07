@@ -208,16 +208,16 @@ for i in range(60):
         # g = g.next_state(c)
         
         #Human Player
-        # actions = g.get_actions(turn)
-        # g.print_actions(actions)
-        # a = input("Which Move")
-        # g = g.next_state(actions[int(a)])
+        actions = g.get_actions(turn)
+        g.print_actions(actions)
+        a = input("Which Move")
+        g = g.next_state(actions[int(a)])
         
         #Minimax Robot Player
-        action = bot3.play(g, not turn, 3)
-        print(action[0:2], action[2].name)
-        # print(g.red_pieces, g.rk)
-        g = g.next_state(action)
+        # action = bot3.play(g, not turn, 6)
+        # print(action[0:2], action[2].name)
+        # # print(g.red_pieces, g.rk)
+        # g = g.next_state(action)
         
         print(g.board())
     if g.game_over(g):
